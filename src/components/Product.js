@@ -16,7 +16,10 @@ type ProductList = {
 
 function Container(props: React$Element<*>) {
   return (
-    <div>{props}</div>
+    <div>
+      <h2>Product List</h2>
+      {props}
+    </div>
   );
 }
 
