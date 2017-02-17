@@ -6,7 +6,7 @@ import App from './App';
 import createDataStore from './helpers/createDataStore';
 import initialState from './db/initialState';
 
-let store = createDataStore(initialState, () => render());
+export let store = createDataStore(initialState, () => render());
 
 
 function render() {

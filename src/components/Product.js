@@ -1,7 +1,10 @@
 // @flow
 
 import React from 'react';
-import {compose, map, prop} from 'ramda';
+import compose from '../helpers/compose';
+import map from '../helpers/map';
+import prop from '../helpers/prop';
+import logPrice from '../actions/logPrice';
 
 
 type ProductList = {
@@ -11,22 +14,22 @@ type ProductList = {
   price: string;
 };
 
-function Container(props: ProductList) {
+function Container(props: React$Element<*>) {
   return (
     <div>{props}</div>
   );
 }
 
-function List(props: ProductList) {
+function List(props: React$Element<*>) {
   return (
     <ul>{props}</ul>
   );
 }
 
 function Item(props: ProductList) {
-  let {id, name} = props;
+  let {id, name, price} = props;
   return (
-    <li key={id}>{name}</li>
+    <li key={id} onClick={() => logPrice(price)}>{name}</li>
   );
 }
 

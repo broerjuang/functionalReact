@@ -6,19 +6,19 @@ let initialState = {
       id: '1',
       name: 'sepatu',
       description: 'expensive shoes',
-      price: '1234',
+      price: '12,000',
     },
     {
       id: '2',
       name: 'baju',
       description: 'expensive baju',
-      price: '1234',
+      price: '13,000',
     },
     {
       id: '3',
       name: 'celana',
       description: 'expensive celana',
-      price: '1234',
+      price: '15,000',
     },
   ],
   sellers: [

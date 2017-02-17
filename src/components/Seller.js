@@ -1,8 +1,9 @@
 // @flow
 
-
 import React from 'react';
-import {compose, map, prop} from 'ramda';
+import compose from '../helpers/compose';
+import map from '../helpers/map';
+import prop from '../helpers/prop';
 
 
 type SellerType = {
@@ -10,15 +11,15 @@ type SellerType = {
   name: string;
 };
 
-function Container(listofSeller: SellerType) {
+function Container(children: React$Element<*>) {
   return (
-    <div>{listofSeller}</div>
+    <div>{children}</div>
   );
 }
 
-function List(sellers: SellerType) {
+function List(children: React$Element<*>) {
   return (
-    <ul>{sellers}</ul>
+    <ul>{children}</ul>
   );
 }
 
