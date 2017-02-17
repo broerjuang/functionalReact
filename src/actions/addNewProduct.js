@@ -9,9 +9,10 @@ type Product = {
 };
 
 
-function addNewProduct(products: Product) {
+function addNewProduct(product: Product) {
+  let {products} = store.getState();
   store.setState({
-    products: [products],
+    products: [...products, product],
   });
 }
 

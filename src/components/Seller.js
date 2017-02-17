@@ -4,6 +4,14 @@ import React from 'react';
 import compose from '../helpers/compose';
 import map from '../helpers/map';
 import prop from '../helpers/prop';
+import addNewProduct from '../actions/addNewProduct';
+
+let product = {
+  id: '12',
+  name: 'newProduct',
+  description: 'aha',
+  price: '12455',
+}
 
 
 type SellerType = {
@@ -26,7 +34,7 @@ function List(children: React$Element<*>) {
 function Item(seller: SellerType) {
   let {id, name} = seller;
   return (
-    <li key={id}>{name}</li>
+    <li key={id} onClick={() => addNewProduct(product)}>{name}</li>
   );
 }
 
