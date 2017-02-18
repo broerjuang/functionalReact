@@ -2,7 +2,6 @@
 import {store} from '../main';
 
 type Product = {
-  id: string;
   name: string;
   description: string;
   price: string;
@@ -10,10 +9,18 @@ type Product = {
 
 
 function addNewProduct(product: Product) {
-  let {products} = store.getState();
-  store.setState({
-    products: [...products, product],
-  });
+  return fetch('http://localhost:8090/products/create', {
+    method: 'POST',
+    body: JSON.stringify({newProduct: product}),
+    mode: 'cors',
+    cache: 'default',
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      return store.setState({
+        products: [...result.products],
+      });
+    });
 }
 
 export default addNewProduct;
