@@ -2,24 +2,12 @@
 
 let initialState = {
   products: [
-    {
-      id: '1',
-      name: 'sepatu',
-      description: 'expensive shoes',
-      price: '12,000',
-    },
-    {
-      id: '2',
-      name: 'baju',
-      description: 'expensive baju',
-      price: '13,000',
-    },
-    {
-      id: '3',
-      name: 'celana',
-      description: 'expensive celana',
-      price: '15,000',
-    },
+    // {
+    //   id: '1',
+    //   name: 'initial-state',
+    //   description: 'expensive shoes',
+    //   price: '12,000',
+    // },
   ],
   sellers: [
     {

@@ -13,8 +13,8 @@ function App(props: Props) {
   let {store} = props;
   return (
     <div>
-      <Product {...store}/>
-      <Seller {...store} />
+      <Product {...store.getState()}/>
+      <Seller {...store.getState()} />
       <Button />
     </div>
   );
